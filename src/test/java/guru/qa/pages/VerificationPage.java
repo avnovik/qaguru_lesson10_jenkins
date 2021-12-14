@@ -25,6 +25,7 @@ public class VerificationPage {
 
     public VerificationPage softAssertForm() {
         ElementsCollection lines = $$(".table-responsive tbody tr").snapshot();
+
         SoftAssertions softly = new SoftAssertions();
 
         for (SelenideElement line : lines) {
