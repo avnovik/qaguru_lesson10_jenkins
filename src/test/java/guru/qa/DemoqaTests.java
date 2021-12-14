@@ -1,12 +1,16 @@
 package guru.qa;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import guru.qa.data.TestData;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 public class DemoqaTests extends TestBase {
 
     @Test
     void fillFormTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
         registrationPage
                 .openPage()
                 .hideBanner()
